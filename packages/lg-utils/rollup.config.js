@@ -2,7 +2,7 @@
  * @Author: lg
  * @Date: 2024-01-25 14:44:13
  * @LastEditors: lg
- * @LastEditTime: 2024-01-26 11:39:48
+ * @LastEditTime: 2024-01-26 11:56:28
  * @Description:
  * @FilePath: \lg-eng\packages\lg-utils\rollup.config.js
  */
@@ -18,7 +18,7 @@ export default {
     {
       file: 'dist/index.esm.js', // package.json 中 "module": "dist/index.esm.js"
       format: 'esm' // es module 形式的包， 用来import 导入， 可以tree shaking
-      // sourcemap: true
+      // sourcemap: true,用于压缩后的代码映射到初始为止,便于错误快速定位
     },
     {
       file: 'dist/index.cjs.js', // package.json 中 "main": "dist/index.cjs.js",

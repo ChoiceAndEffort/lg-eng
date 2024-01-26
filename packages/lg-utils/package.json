@@ -1,11 +1,16 @@
 {
-  "name": "lg-utils",
+  "name": "@lg/lg-utils",
   "version": "1.0.0",
   "type": "module",
-  "main": "dist/bundle.js",
+  "main": "dist/index.cjs.js", // CJS格式入口点，用于CommonJS环境，如Node.js
+  "module": "dist/index.esm.js", // ESM格式入口点，用于支持ES模块的环境，如现代浏览器或支持ESM的Node.js
+  "unpkg": "dist/index.umd.js", // UMD格式入口点，适用于浏览器全局环境，可通过 unpkg.com CDN 快速使用
   "scripts": {
     "build": "rollup -c"
   },
+  "files": [
+    "dist"
+  ],
   "devDependencies": {
     "rollup": "^4.9.6",
     "rollup-plugin-delete": "^2.0.0",
